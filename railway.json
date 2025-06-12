@@ -1,0 +1,11 @@
+{
+  "build": {
+    "env": {
+      "PORT": "11434"
+    },
+    "command": "docker build -t servidor-ollama ."
+  },
+  "deploy": {
+    "command": "./start.sh"
+  }
+}
