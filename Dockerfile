@@ -1,10 +1,10 @@
 FROM ollama/ollama
 
-# Cargar el modelo llama2 (puedes cambiarlo por llama3 si lo prefieres)
+# Descarga automática del modelo al construir
 RUN ollama pull llama2
 
-# Exponer el puerto en el que Ollama escucha
+# Railway usa este puerto automáticamente si lo expones
 EXPOSE 11434
 
-# Comando para iniciar el servidor Ollama
+# Comando para lanzar el servidor Ollama
 CMD ["ollama", "serve"]
